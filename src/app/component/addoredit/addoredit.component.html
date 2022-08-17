@@ -1,0 +1,52 @@
+<p>addoredit works!</p>
+<div class="bs-example">
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                <button (click)="closeModal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form [formGroup]="productForm">
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Title</label>
+                    <input formControlName="title" type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Category:</label>
+                    <input formControlName="category" type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Count:</label>
+                    <input formControlName="count" type="number" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Price:</label>
+                    <input formControlName="price" type="number" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Rate:</label>
+                    <input formControlName="rate" type="number" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Image:</label>
+                    <input formControlName="image" type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Description:</label>
+                    <textarea formControlName="description" class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button (click)="closeModal()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button (click)="addOrEdit()" type="button" class="btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
